@@ -2,7 +2,6 @@
 # This script displays the status of a list of specified services
 # Base version used for this script: https://github.com/yboetz/motd/blob/master/40-services
 
-
 # set column width
 COLUMNS=3
 # colors
@@ -10,7 +9,7 @@ green="\e[1;32m"
 red="\e[1;31m"
 undim="\e[0m"
 
-services=("fail2ban" "ufw" "docker" "apache2")
+services=("fail2ban" "ufw" "docker" "pm2" "ssh" "cron" "mysql" "nginx" "snapd" "networking" "rsyslog")
 # sort services
 IFS=$'\n' services=($(sort <<<"${services[*]}"))
 unset IFS
@@ -38,4 +37,3 @@ out+="\n"
 
 printf "\nservices:\n"
 printf "$out" | column -ts $',' | sed -e 's/^/  /'
-
