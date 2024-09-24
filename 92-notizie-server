@@ -1,0 +1,19 @@
+#!/bin/bash
+# This script displays the status of a list of specified services
+# Base version used for this script: https://github.com/yboetz/motd/blob/master/40-services
+
+
+R="\\e[1;30;44m"
+RE="\\e[0m"
+echo -e "
+
+                            $R ULTIME NOTIZIE $RE
+
+------------------------------------------------------------------------------
+* giovedì 18 aprile: ho fatto il nuovo file di presentazione (penso si veda)
+* giovedì 18 aprile: leggere il file readme.txt nella cartella script
+------------------------------------------------------------------------------
+
+##############################################################################"
+
+
